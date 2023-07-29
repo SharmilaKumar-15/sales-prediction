@@ -1,0 +1,79 @@
+<html>  
+<head>  
+    <title>upload</title>  
+</head>  
+<style>
+   body {
+  margin: 200px 60px;
+  
+  
+}
+
+.drop-container {
+  background-color: rgb(108, 193, 233);
+  position: relative;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px ;
+  height: 200px;
+  padding: 20px;
+  
+  cursor: pointer;
+  transition: background .2s ease-in-out, border .2s ease-in-out;
+}
+.drop-title {
+    background-color: rgb(92, 190, 235);
+  color: #444;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  transition: color .2s ease-in-out;
+}
+
+input[type=file] {
+
+  width: 350px;
+  max-width: 100%;
+  color: #444;
+  padding: 5px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #555;
+}
+
+input[type=file]::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  background: #084cdf;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background .2s ease-in-out;
+}
+
+input[type=file]::file-selector-button:hover {
+  background: #0d45a5;
+}
+        
+
+</style>
+<body>  
+    
+    <form action = "/success" method = "post" enctype="multipart/form-data" class="drop-container" >  
+        <input type="file" id="images" name="file" />
+        <select id='itemname' name="itemname" id="item">
+          <option>Yearly</option>
+          <option>Monthly</option>
+          <option>Weekly</option>
+          <option>Daily</option>
+      </select>
+          <input type='text' id='num' name="num"  style.display='block' > 
+        <input type = "submit" id="images" value="Upload">  
+    </form>  
+    
+</body>  
+</html>  
